@@ -51,7 +51,5 @@ let run cmd =
   let module Command = (val cmd : SCommand) in
   Command.run Sys.argv
 
-
 let apk_doc = "Principles of Program Analysis -- Laboratory"
 let apk_version = "ppalab24-1-3-gd73e1a5"
-
