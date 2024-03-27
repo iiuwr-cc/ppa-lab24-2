@@ -1,0 +1,42 @@
+{
+  "tests": [
+    {
+      "name": "Check style",
+      "setup": ".github/opam-own.sh",
+      "run": ".github/ocamlformat.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run tests for lifo and fifo",
+      "setup": ".github/opam-make.sh",
+      "run": ".github/opam-test.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run tests for rr and rpo",
+      "run": ".github/opam-test2.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Run tests for scc",
+      "run": ".github/opam-test3.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
