@@ -115,8 +115,9 @@ module AnalyseImpl = struct
     let mfp = Analysis_registry.lookup_analysis analysis in
     let module MFP = (val mfp : Analysis.SMonotoneFrameworkParameters) in
     let module MFP = Analysis.WrapWithMeasurements (MFP) in
-    let module MFA = (val Analysis_registry.lookup_algorithm algorithm
-                        : Analysis.SMonotoneFrameworkAlgorithm)
+    let module MFA =
+      (val Analysis_registry.lookup_algorithm algorithm
+          : Analysis.SMonotoneFrameworkAlgorithm)
     in
     let module MF = MFA (MFP) in
     algorithm_registry_consistency_check algorithm MF.algorithm_name;
